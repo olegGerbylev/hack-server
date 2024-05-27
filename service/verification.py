@@ -3,6 +3,26 @@ import requests
 from docx import Document
 import re
 
+import zipfilefrom
+from lxml import etree
+
+# Отделение ключа от документа, для последующей проверки
+def check_docx_signature(docx_path):
+    with zipfile.ZipFile(docx_path, 'r') as docx:
+        if 'docProps/core.xml' in docx.namelist():
+            core_properties = docx.read('docProps/core.xml')
+            root = etree.fromstring(core_properties)
+            namespaces = {'cp': 'http://schemas.openxmlformats.org/package/2006/metadata/core-properties'}
+            for signature in root.findall('.//cp:keywords', namespaces):
+                if 'signed' in signature.text.lower():
+                    return True
+    return False
+    docx_path = 'path/to/document.docx'
+    if check_docx_signature(docx_path):
+        print("Документ содержит электронную подпись.")
+    else:
+        print("Документ не содержит электронную подпись.")
+
 def compare_docx_contents(file_path1, file_path2):
     doc1 = Document(file_path1)
 
