@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICADA8 Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <img src="cicada8.svg" alt="Logo" class="logo">
+        <div class="login-form">
+            <h2 class="login-title">Регистрация</h2>
+            <h3 class="form-title">Общие данные</h3>
+            <div class="input-container container">
+                <input type="text" class="form-input fname-input" placeholder="Ваше имя">
+            </div>
+            <div class="input-container container">
+                <input type="text" class="form-input mname-input" placeholder="Ваша фамилия">
+            </div>
+            <div class="input-container container">
+                <input type="text" class="form-input lname-input" placeholder="Ваше отчетство">
+            </div>
+            <div class="input-container container">
+                <input type="text" class="form-input email-input" placeholder="login">
+            </div>
+            <div class="input-container container">
+                <input type="text" class="form-input password-input" placeholder="password">
+            </div>
+            <div class="input-container bd-container">
+                <input type="date" name="calendar", value = "2024-01-01", id="date" class="form-input bd-input" placeholder="Дата рождения">
+            </div>
+            <div class="input-container container">
+                <input type="text" class="form-input s-input" value="Выберите пол" readonly>
+                <select class="select-option" >
+                    <option >М</option>
+                    <option >Ж</option>
+                  </select>
+            </div>
+            <h3 class="form-title">Паспортные данные</h3>
+            <div class="input-container container">
+                <input type="text" class="form-input pasport-ser-input" placeholder="Серия паспорта">
+            </div>
+            <div class="input-container container">
+                <input type="text" class="form-input pasport-no-input" placeholder="Номер паспорта">
+            </div>
+            <div class="input-container container">
+                <input type="text" class="form-input pasport-serd-input" placeholder="Кем выдан">
+            </div>
+            <div class="input-container container">
+                <input type="date" name="calendar", value = "2024-01-01", id="date1" class="form-input pasport-date-input" placeholder="Дата выдачи">
+            </div>
+            <div class="input-container container">
+                <input type="text" class="form-input pasport-code-input" placeholder="Код подразделения">
+            </div>
+            <div class="input-container container">
+                <input type="text" class="form-input living-input" placeholder="Место жительства">
+            </div>
+            <h3 class="form-title">Данные о компании</h3>
+            <div class="input-container container">
+                <input type="text" class="form-input inn-input" placeholder="ИНН">
+            </div>
+            <div class="input-container container">
+                <input type="text" class="form-input comp-name-input" placeholder="Название компании">
+            </div>
+            <div class="options-container">
+                <label class="pd">
+                    <input type="checkbox" class="checkbox">
+                    <span class="remember-text">Даю согласие на обработку <a href = "https://www.example.com">персональных данных </a> и согласен <a href = "https://www.example.com">с пользовательским соглашением</a> </span>
+                </label>
+            </div>
+            <button onclick="registration()" class="letter-button">Получить авторизационное письмо</button>
+        </div>
+    </div>
+    <script>
+        function registration() {
+            const formData = {
+                    "name": document.querySelector('.form-input.fname-input').value,
+                    "familyName": document.querySelector('.form-input.mname-input').value,
+                    "surname": document.querySelector('.form-input.lname-input').value,
+                    "sex": document.querySelector('.select-option').value,
+                    "DOB": "1990-05-26",
+                    "email": document.querySelector('.form-input.email-input').value,
+                    "password": document.querySelector('.form-input.password-input').value,
+                    "company": document.querySelector('.form-input.comp-name-input').value,
+                    "companyTIN": document.querySelector('.form-input.inn-input').value,
+                    "passportSeries": document.querySelector('.form-input.pasport-ser-input').value,
+                    "passportID": document.querySelector('.form-input.pasport-no-input').value,
+                    "issuedBy": document.querySelector('.form-input.pasport-serd-input').value,
+                    "dateIssue": "2020-01-15",
+                    "departmentCode": document.querySelector('.form-input.pasport-code-input').value,
+                    "location": document.querySelector('.form-input.living-input').value,
+                    "PPD": "true"
+            };
+
+            fetch('http://127.0.0.1:5000/register', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData),
+            })
+            .then(response => {
+              if (response.ok) {
+                return response.json();
+                window.location.href = 'http://localhost:63342/pythonProject1/front/index.html?_ijt=ng8iq0nkor2af2f17jdefaisgv&_ij_reload=RELOAD_ON_SAVE';
+              }
+              throw new Error('Network response was not ok.');
+            })
+            .then(data => {
+              console.log('Form data sent successfully:', data);
+            })
+            .catch(error => {
+              console.error('An error occurred while sending form data:', error);
+            });
+
+        }
+    </script>
+</body>
+</html>

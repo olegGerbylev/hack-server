@@ -1,0 +1,320 @@
+.main-container {
+  background: url("background.png");
+  background-size: cover;
+  background-position: center;
+  padding: 175px 747px 355px 748px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+.logo {
+  width: 264px;
+  height: 51px;
+  margin-bottom: 35px;
+}
+body 
+{
+  margin: 0; padding: 0; 
+}
+h3
+{
+  color: white;
+  font-family: var(--segoe-ui-30-semi-bold-family);
+  font-size: 20px;
+  font-weight: var(--segoe-ui-30-semi-bold-weight);
+  line-height: var(--segoe-ui-30-semi-bold-line-height);
+}
+.login-form {
+  background-color: #141414;
+  border-radius: 10px;
+  padding: 30px 40px 20px 20px; /* Увеличиваем padding */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--dark-slate-gray);
+  width: 350px; /* Ширина формы */
+}
+
+.login-title {
+  color: var(--white);
+  margin-bottom: 40px;
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+  font-family: var(--segoe-ui-30-semi-bold-family);
+  font-size: var(--segoe-ui-30-semi-bold-size);
+  font-weight: var(--segoe-ui-30-semi-bold-weight);
+  line-height: var(--segoe-ui-30-semi-bold-line-height);
+}
+.downloadicon
+{
+  width: 40px;
+  height: 40px;
+  background-image: url('download.png');
+  background-size: cover;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.uploadicon
+{
+  width: 60px;
+  height: 40px;
+  background-image: url('upload.png');
+  background-size: cover;
+  cursor: pointer;
+  margin-left: 60px;
+  margin-right: 40px;
+}
+.select-option
+{
+  color: var(--white);
+  font-family: var(--segoe-ui-14-semi-bold-family);
+  font-size: var(--segoe-ui-14-semi-bold-size);
+  font-weight: var(--segoe-ui-14-semi-bold-weight);
+  line-height: var(--segoe-ui-14-semi-bold-line-height);
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%; /* Ширина инпута */
+}
+.select-option::after
+{
+  color: black;
+  font-family: var(--segoe-ui-14-semi-bold-family);
+  font-size: var(--segoe-ui-14-semi-bold-size);
+  font-weight: var(--segoe-ui-14-semi-bold-weight);
+  line-height: var(--segoe-ui-14-semi-bold-line-height);
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%; /* Ширина инпута */
+}
+.input-container {
+  background-color: var(--black);
+  margin-bottom: 17px;
+  border-radius: 8px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--dark-slate-gray);
+  width: 100%; /* Ширина контейнера */
+}
+.date
+{
+  color: white;
+}
+.form-input bd-input
+{
+  width: 50%;
+}
+.email-input, .password-input, .fname-input, .mname-input, .bd-input, .s-input, .lname-input, .pasport-ser-input, .pasport-no-input, .pasport-vid-input, .pasport-date-input, .pasport-code-input, .living-input, .inn-input, .comp-name-input::after {
+  color: var(--dark-slate-gray-2);
+  font-family: var(--segoe-ui-14-semi-bold-family);
+  font-size: var(--segoe-ui-14-semi-bold-size);
+  font-weight: var(--segoe-ui-14-semi-bold-weight);
+  line-height: var(--segoe-ui-14-semi-bold-line-height);
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%; /* Ширина инпута */
+}
+.email-input, .password-input, .fname-input, .mname-input, .lname-input, .bd-input, .s-input, .pasport-ser-input, .pasport-no-input, .pasport-vid-input, .pasport-date-input, .pasport-code-input, .living-input, .comp-name-input{
+  color: white;
+  font-family: var(--segoe-ui-14-semi-bold-family);
+  font-size: var(--segoe-ui-14-semi-bold-size);
+  font-weight: var(--segoe-ui-14-semi-bold-weight);
+  line-height: var(--segoe-ui-14-semi-bold-line-height);
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%; /* Ширина инпута */
+}
+.letter-container
+{
+  color: white;
+  font-family: var(--segoe-ui-14-semi-bold-family);
+  font-size: var(--segoe-ui-14-semi-bold-size);
+  font-weight: var(--segoe-ui-14-semi-bold-weight);
+  line-height: var(--segoe-ui-14-semi-bold-line-height);
+  background: none;
+  border: dotted var(--dark-slate-gray-2);
+  outline: none;
+  width: 100%; 
+
+}
+.fletter-container
+{
+  color: white;
+  font-family: var(--segoe-ui-14-semi-bold-family);
+  font-size: var(--segoe-ui-14-semi-bold-size);
+  font-weight: var(--segoe-ui-14-semi-bold-weight);
+  line-height: var(--segoe-ui-14-semi-bold-line-height);
+  background: none;
+  border: dotted var(--dark-slate-gray-2);
+  outline: none;
+  width: 100%; 
+
+}
+.password-container {
+  margin-bottom: 30px;
+}
+
+.options-container {
+  margin-bottom: 17px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: 10px;
+  padding: 0 0 4px 2.5px;
+  position: relative;
+  margin-bottom: 7px;
+}
+
+.checkbox::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background-color: var(--black);
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  border: 1px solid var(--cyan); 
+  transition: background-color 0.2s ease; 
+}
+
+.checkbox:checked::before {
+  background-color: rgb(11, 73, 73); 
+}
+.remember-text {
+  color: var(--white);
+  font-family: var(--segoe-ui-14-semi-bold-family);
+  font-size: var(--segoe-ui-14-semi-bold-size);
+  font-weight: var(--segoe-ui-14-semi-bold-weight);
+  line-height: var(--segoe-ui-14-semi-bold-line-height);
+}
+
+.forgot-password {
+  color: var(--cyan);
+  font-family: var(--segoe-ui-14-semi-bold-family);
+  font-size: var(--segoe-ui-14-semi-bold-size);
+  font-weight: var(--segoe-ui-14-semi-bold-weight);
+  line-height: var(--segoe-ui-14-semi-bold-line-height);
+  text-decoration: none
+}
+
+.login-button {
+  background-color: var(--black);
+  margin-bottom: 10px;
+  border-radius: 6px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--cyan);
+  cursor: pointer;
+  color: var(--cyan);
+  width: 40%; /* Ширина кнопки */
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.login-button:hover {
+  background-color: rgb(11, 73, 73);
+  margin-bottom: 10px;
+  border-radius: 6px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--cyan);
+  cursor: pointer;
+  color: var(--cyan);
+  width: 40%; /* Ширина кнопки */
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.letter-button {
+  background-color: var(--black);
+  margin-bottom: 10px;
+  border-radius: 6px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--cyan);
+  cursor: pointer;
+  color: var(--cyan);
+  width: 80%; /* Ширина кнопки */
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.letter-button:hover {
+  background-color: rgb(11, 73, 73);
+  margin-bottom: 10px;
+  border-radius: 6px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--cyan);
+  cursor: pointer;
+  color: var(--cyan);
+  width: 80%; /* Ширина кнопки */
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.create-account {
+  color: var(--cyan);
+  text-align: center;
+  width: 35%;
+  font-family: var(--segoe-ui-14-semi-bold-family);
+  font-size: var(--segoe-ui-14-semi-bold-size);
+  font-weight: var(--segoe-ui-14-semi-bold-weight);
+  line-height: var(--segoe-ui-14-semi-bold-line-height);
+  text-decoration: none
+}
+
+.create-account:hover {
+  color: rgb(10, 87, 87);
+  text-align: center;
+  width: 35%;
+  font-family: var(--segoe-ui-14-semi-bold-family);
+  font-size: var(--segoe-ui-14-semi-bold-size);
+  font-weight: var(--segoe-ui-14-semi-bold-weight);
+  line-height: var(--segoe-ui-14-semi-bold-line-height);
+  text-decoration: none
+}
+
+:root {
+  /* Colors */
+  --black: rgba(20, 20, 20, 1);
+  --black-2: rgba(0, 0, 0, 1);
+  --cyan: rgba(0, 255, 216, 1);
+  --dark-slate-gray: rgba(60, 60, 60, 1);
+  --dark-slate-gray-2: rgba(70, 79, 75, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  /* Typographies */
+  /* segoe-ui-14-semi-bold */
+  --segoe-ui-14-semi-bold-family: "Segoe UI";
+  --segoe-ui-14-semi-bold-size: 14px;
+  --segoe-ui-14-semi-bold-weight: 600;
+  --segoe-ui-14-semi-bold-line-height: normal;
+
+  /* segoe-ui-30-semi-bold */
+  --segoe-ui-30-semi-bold-family: "Segoe UI";
+  --segoe-ui-30-semi-bold-size: 30px;
+  --segoe-ui-30-semi-bold-weight: 600;
+  --segoe-ui-30-semi-bold-line-height: normal;
+}

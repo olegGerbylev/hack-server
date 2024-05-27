@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICADA8 Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <img src="cicada8.svg" alt="Logo" class="logo">
+        <div class="login-form">
+            <div class="input-container email-container">
+                <input type="text" id="email" class="form-input email-input" placeholder="Ваш Email">
+            </div>
+            <div class="input-container email-container">
+                <input type="text" id="token" class="form-input token-input" placeholder="Ваш токен">
+            </div>
+              <button onclick="send()" class="login-button">Отправить письмо</button>
+        </div>
+    </div>
+    <script>
+        function send() {
+            const formData = {
+                "token": document.querySelector('.form-input.token-input').value,
+                "email": document.querySelector('.form-input.email-input').value
+            }
+            fetch('http://127.0.0.1:5000/sendDocument', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData),
+            })
+            .then(response => {
+              if (response.ok) {
+                return response.json();
+              }
+              throw new Error('Network response was not ok.');
+            })
+            .then(data => {
+              console.log('Form data sent successfully:', data);
+            })
+            .catch(error => {
+              console.error('An error occurred while sending form data:', error);
+            });
+
+        }
+    </script>
+</body>
+</html>

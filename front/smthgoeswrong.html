@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICADA8 Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .file-input-container {
+          position: fixed;
+        }
+        
+        .file-input-label {
+          background-color: rgba(20, 20, 20, 1);
+          padding: 10px 15px;
+          cursor: pointer;
+          background-size: contain;
+          background-repeat: no-repeat;
+          border-radius: 10px;
+          margin-left: 300px;
+          width: 200px;
+          height: 200px;
+          background-image: url('upload.png');
+        }
+        
+        .file-input {
+          width: 0.1px;
+          height: 0.1px;
+          opacity: 0;
+          position: absolute;
+          z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <img src="cicada8.svg" alt="Logo" class="logo">
+        <div class="login-form">
+            <h2 class="login-title">Что то пошло не так!</h2>
+            <div class="input-container letter-container">
+                <ol>
+                    <li>Проверьте правильность заполненных данных</li>
+                    <li>Ваш файл поврежден</li>
+                    <li>Истек срок службы ЭЦП</li>
+                </ol>
+                <div class="file-input-container">
+                    <label class="file-input-label" for="file-upload"></label>
+                    <input id="file-upload" class="file-input" type="file">
+                </div>
+            </div>
+            <button onclick="location.href='https://www.example.com';" class="letter-button">Пройти верификацию</button>
+        </div>
+    </div>
+</body>
+</html>

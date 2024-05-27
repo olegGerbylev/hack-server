@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICADA8 Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <img src="cicada8.svg" alt="Logo" class="logo">
+        <div class="login-form">
+            <h2 class="login-title">Вход в систему</h2>
+            <div class="input-container email-container">
+                <input type="text" id="email" class="form-input email-input" placeholder="Ваш Email">
+            </div>
+            <div class="input-container password-container">
+                <input type="password" id="password" class="form-input password-input" placeholder="Ваш пароль">
+            </div>
+            <div class="options-container">
+                <label class="remember-me">
+                    <input type="checkbox" class="checkbox">
+                    <span class="remember-text">Запомнить меня</span>
+                </label>
+                <a href="#" class="forgot-password">Забыли пароль?</a>
+            </div>
+            <button onclick="login()" class="login-button">Вход в систему</button>
+            <a href="http://localhost:63342/pythonProject1/front/register.html?_ijt=e1cjr3q7sokd0lvik6u7quehnl&_ij_reload=RELOAD_ON_SAVE" class="create-account">Создать аккаунт</a>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Construct your request here (e.g., using Fetch API or XMLHttpRequest)
+            // Example using Fetch API:
+            fetch('http://127.0.0.1:5000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email: email, password: password })
+            })
+            .then(response => {
+                // Handle the response from the server
+                console.log(response);
+            })
+            .catch(error => {
+                // Handle any errors that occur during the request
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
+
